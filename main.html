@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cosmic-Perott Airlines | First Class Boarding</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter (Sans) & JetBrains Mono (Ticket Details) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            luxury: {
+              bg: '#FAF9F6',        /* Cream white terminal floor */
+              card: '#FFFFFF',      /* Crisp white ticket body */
+              border: '#E8E5DF',    /* Soft architectural border */
+              gold: '#B89759',      /* Subtle metallic gold highlight */
+              goldLight: '#F7F4EC', /* Light champagne ticket accent */
+              black: '#0F1115',     /* Deep obsidian slate */
+              subtext: '#6E7480',   /* Crisp slate subtext */
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Dashed ticket line cut effect */
+    .ticket-stub-line {
+      background-image: linear-gradient(to bottom, #D1D5DB 50%, rgba(255, 255, 255, 0) 0%);
+      background-position: right;
+      background-size: 2px 10px;
+      background-repeat: repeat-y;
+    }
+    /* Simulated Barcode */
+    .barcode {
+      background: repeating-linear-gradient(
+        90deg,
+        #0F1115,
+        #0F1115 2px,
+        transparent 2px,
+        transparent 4px,
+        #0F1115 4px,
+        #0F1115 7px,
+        transparent 7px,
+        transparent 9px
+      );
+    }
+  </style>
+</head>
+<body class="bg-luxury-bg text-luxury-black font-sans antialiased selection:bg-luxury-black selection:text-white min-h-screen flex flex-col justify-between">
+
+  <!-- Navigation / Terminal Header Bar -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-luxury-bg/90 backdrop-blur-md border-b border-luxury-border">
+    <div class="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between font-mono text-xs uppercase tracking-widest">
+      <div class="flex items-center space-x-3">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span class="font-bold text-luxury-black">COSMIC-PEROTT AIRLINES</span>
+        <span class="text-luxury-subtext">•</span>
+        <span class="text-luxury-subtext">FIRST CLASS LOUNGE</span>
+      </div>
+      <a href="aboutthecaptain.html" class="text-luxury-black font-bold hover:text-luxury-gold transition border-b border-luxury-black hover:border-luxury-gold pb-0.5">
+        👨‍✈️ CAPTAIN SPECS ↗
+      </a>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-6 pt-28 pb-16 space-y-12 flex-1 flex flex-col justify-center">
+
+    <!-- Page Title & Header -->
+    <section class="text-center space-y-4 pt-4">
+      <div class="inline-flex items-center space-x-2 text-[11px] font-mono tracking-widest uppercase px-3 py-1 rounded-full bg-luxury-goldLight text-luxury-gold border border-luxury-gold/30">
+        ✈ PRIVATE FLIGHT DIRECTORY
+      </div>
+      <h1 class="text-4xl sm:text-6xl font-bold tracking-tight text-luxury-black">
+        You Are Invited.
+      </h1>
+      <p class="text-luxury-subtext text-base sm:text-lg max-w-xl mx-auto font-normal">
+        Websites can be a world that should be experienced. Today, I will show you mine.
+      </p>
+    </section>
+
+    <!-- REALISTIC AMERICAN AIRLINE STYLE BOARDING PASS -->
+    <section id="ticket" class="relative">
+      <div class="bg-luxury-card border border-luxury-border rounded-xl shadow-xl shadow-black/5 overflow-hidden grid lg:grid-cols-12">
+        
+        <!-- Main Boarding Pass Body (Left 8 Columns) -->
+        <div class="lg:col-span-8 p-6 sm:p-8 space-y-6 relative">
+          
+          <!-- Ticket Header -->
+          <div class="flex justify-between items-center border-b border-luxury-border pb-4">
+            <div class="flex items-center space-x-3">
+              <span class="text-lg font-bold tracking-widest font-mono text-luxury-black">FIRST CLASS</span>
+              <span class="text-xs bg-luxury-gold text-white font-mono px-2 py-0.5 rounded font-bold uppercase tracking-wider">BOARDING PASS</span>
+            </div>
+            <div class="text-right font-mono text-xs text-luxury-subtext">
+              PASSENGER: <span class="text-luxury-black font-bold">GUEST / VISITOR</span>
+            </div>
+          </div>
+
+          <!-- Route Section: FROM -> TO -->
+          <div class="grid grid-cols-11 items-center py-2">
+            <!-- Origin -->
+            <div class="col-span-4 space-y-1">
+              <span class="text-[10px] font-mono uppercase text-luxury-subtext tracking-wider">ORIGIN LOCATION</span>
+              <div class="text-2xl sm:text-3xl font-extrabold font-mono text-luxury-black tracking-tight">YOUR COMPUTER</div>
+              <p class="text-xs text-luxury-subtext font-mono">SYS // LOCAL HOST</p>
+            </div>
+
+            <!-- Flight Icon Divider -->
+            <div class="col-span-3 text-center space-y-1">
+              <div class="text-xs font-mono text-luxury-gold font-bold">NON-STOP</div>
+              <div class="flex items-center justify-center space-x-2">
+                <div class="h-px bg-luxury-border flex-1"></div>
+                <span class="text-luxury-gold text-base">✈</span>
+                <div class="h-px bg-luxury-border flex-1"></div>
+              </div>
+              <div class="text-[10px] font-mono text-luxury-subtext">DIRECT FLT 001</div>
+            </div>
+
+            <!-- Destination -->
+            <div class="col-span-4 text-right space-y-1">
+              <span class="text-[10px] font-mono uppercase text-luxury-subtext tracking-wider">DESTINATION</span>
+              <div class="text-2xl sm:text-3xl font-extrabold font-mono text-luxury-black tracking-tight">MY WORLD</div>
+              <p class="text-xs text-luxury-subtext font-mono">PORTFOLIO // DIGITAL</p>
+            </div>
+          </div>
+
+          <!-- Flight Grid Details -->
+          <div class="grid grid-cols-4 gap-4 pt-4 border-t border-luxury-border font-mono text-xs">
+            <div>
+              <span class="text-luxury-subtext block text-[10px]">GATE</span>
+              <strong class="text-luxury-black text-sm">A-01</strong>
+            </div>
+            <div>
+              <span class="text-luxury-subtext block text-[10px]">BOARDING TIME</span>
+              <strong class="text-luxury-black text-sm">IMMEDIATE</strong>
+            </div>
+            <div>
+              <span class="text-luxury-subtext block text-[10px]">SEAT</span>
+              <strong class="text-luxury-gold text-sm font-bold">01A</strong>
+            </div>
+            <div>
+              <span class="text-luxury-subtext block text-[10px]">CAPTAIN PROFILE</span>
+              <a href="aboutthecaptain.html" class="inline-block text-luxury-black hover:text-luxury-gold font-bold underline text-xs pt-0.5 transition">
+                MEET CAPTAIN ↗
+              </a>
+            </div>
+          </div>
+
+          <!-- Simulated Barcode -->
+          <div class="pt-2 flex items-center justify-between">
+            <div class="h-10 w-2/3 barcode opacity-80"></div>
+            <span class="font-mono text-[10px] text-luxury-subtext">REC: 8829-YN2026</span>
+          </div>
+
+        </div>
+
+        <!-- Ticket Tear-Off Stub (Right 4 Columns) -->
+        <div class="lg:col-span-4 bg-luxury-goldLight/50 p-6 sm:p-8 border-t lg:border-t-0 lg:border-l border-luxury-border ticket-stub-line flex flex-col justify-between space-y-6">
+          <div class="space-y-4">
+            <div class="flex justify-between items-center font-mono text-xs">
+              <span class="font-bold text-luxury-gold uppercase tracking-wider">PASSENGER STUB</span>
+              <span class="text-luxury-subtext">SEAT 01A</span>
+            </div>
+
+            <div class="space-y-3 font-mono text-xs">
+              <div>
+                <span class="text-[10px] text-luxury-subtext block">PASSENGER</span>
+                <span class="font-bold text-luxury-black">VALUED VISITOR</span>
+              </div>
+              <div>
+                <span class="text-[10px] text-luxury-subtext block">COMMANDING PILOT</span>
+                <a href="aboutthecaptain.html" class="font-bold text-luxury-black hover:text-luxury-gold underline block transition">
+                  CAPTAIN PROFILE ↗
+                </a>
+              </div>
+              <div>
+                <span class="text-[10px] text-luxury-subtext block">DESTINATION</span>
+                <span class="font-bold text-luxury-black">MY WORLD</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-luxury-border/60 space-y-2">
+            <a href="captain.html" class="block text-center py-3 bg-luxury-black text-white hover:bg-neutral-800 font-mono text-xs font-semibold tracking-wider transition uppercase shadow-sm">
+              BOARD FLIGHT ↗
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-luxury-border py-6 text-center font-mono text-xs text-luxury-subtext">
+    <p>COSMIC-PEROTT AIRLINES // LUXURY TRANSIT EXPERIENCE</p>
+  </footer>
+
+</body>
+</html>
