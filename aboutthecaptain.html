@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IFE Monitor | Captain Profile | Cosmic-Perott Airlines</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter (Sans) & JetBrains Mono (Specs) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            luxury: {
+              bg: '#FAF9F6',        /* Cream white floor */
+              card: '#FFFFFF',      /* Crisp white elements */
+              border: '#E8E5DF',    /* Soft border */
+              gold: '#B89759',      /* Gold highlight */
+              goldLight: '#F7F4EC', /* Champagne accent */
+              black: '#0F1115',     /* Obsidian slate */
+              subtext: '#6E7480',   /* Slate subtext */
+            }
+          },
+          boxShadow: {
+            'ife': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05), inset 0 0 1px 1px rgba(0,0,0,0.02)',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-luxury-bg text-luxury-black font-sans antialiased h-screen w-screen flex flex-col p-4 md:p-6 lg:p-8 selection:bg-luxury-black selection:text-white overflow-hidden">
+
+  <!-- THE "MONITOR" CONTAINER -->
+  <!-- Mimics a large IFE screen with a slight rounded bezel -->
+  <div class="flex-1 bg-luxury-card border border-luxury-border shadow-ife rounded-xl overflow-hidden flex flex-col">
+    
+    <!-- IFE Header Bar (Standard Status Icons) -->
+    <header class="h-10 border-b border-luxury-border flex items-center justify-between px-4 bg-luxury-card/50 backdrop-blur-sm sticky top-0 z-10 font-mono text-[10px] text-luxury-subtext uppercase tracking-widest">
+      <div class="flex items-center space-x-4">
+        <span class="text-luxury-black font-bold">COSMIC-PEROTT // IFE v3.1</span>
+        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+        <span class="text-xs">4G/LTE</span>
+      </div>
+      <nav class="flex items-center space-x-6">
+        <button class="hover:text-luxury-black transition text-luxury-black font-semibold">PILOT</button>
+        <div class="text-luxury-black font-medium pl-4 border-l border-luxury-border/50">14:32 KR</div>
+      </nav>
+    </header>
+
+    <!-- MAIN IFE CONTENT AREA -->
+    <div class="flex-1 grid md:grid-cols-12 overflow-hidden">
+
+      <!-- LEFT SIDEBAR: Personal Identification -->
+      <aside class="md:col-span-4 bg-luxury-goldLight/50 p-6 md:p-8 border-r border-luxury-border flex flex-col space-y-6">
+        <div class="space-y-3">
+          <div class="inline-flex items-center space-x-2 text-[10px] font-mono tracking-widest uppercase px-3 py-1 rounded-full bg-luxury-card text-luxury-gold border border-luxury-gold/20">
+            CREW MANIFEST // FLIGHT 001
+          </div>
+          <h1 class="text-3xl font-extrabold text-luxury-black tracking-tight leading-tight">
+            About the Captain.
+          </h1>
+          <p class="text-luxury-subtext text-sm max-w-sm">
+            Welcome aboard. This section displays background, credentials, and contact vectors for the aircraft’s commanding engineer.
+          </p>
+        </div>
+
+        <div class="border border-luxury-border bg-luxury-card p-5 space-y-4 shadow-sm">
+          <div class="flex items-center space-x-4">
+            <!-- Simulated Avatar Placeholder -->
+            <div class="w-16 h-16 bg-luxury-black text-white rounded-full flex items-center justify-center text-3xl font-bold font-mono border-2 border-luxury-border">
+              COS
+            </div>
+            <div>
+              <div class="font-mono text-xs text-luxury-subtext">NAME // IDENT</div>
+              <div class="text-xl font-bold text-luxury-black">JUNYOUNG KIM</div>
+              <div class="text-xs font-semibold text-luxury-gold uppercase tracking-widest mt-0.5">SOFTWARE ENGINEER / UX DEV</div>
+            </div>
+          </div>
+          
+          <div class="grid grid-cols-2 gap-x-2 gap-y-3 pt-4 border-t border-luxury-border/60 font-mono text-xs">
+            <div>
+              <span class="text-luxury-subtext text-[10px] block">ACCOUNT NAME</span>
+              <strong class="text-luxury-black">COSMIC-PEROTT</strong>
+            </div>
+            <div>
+              <span class="text-luxury-subtext text-[10px] block">LANGUAGES</span>
+              <strong class="text-luxury-black">PY, JS, TS, JAVA</strong>
+            </div>
+            <div>
+              <span class="text-luxury-subtext text-[10px] block">TOTAL HOURS (EXP)</span>
+              <strong class="text-luxury-black">9,450hrs+ (7 Years)</strong>
+            </div>
+            <div>
+              <span class="text-luxury-subtext text-[10px] block">MEDICAL CLASS</span>
+              <strong class="text-luxury-black">CLASS 1 // FIRST</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-4 mt-auto">
+          <a href="mailto:jy2kim27@pupils.nlcsjeju.kr" class="block text-center py-3 bg-luxury-black text-white hover:bg-neutral-800 font-mono text-xs font-semibold tracking-wider transition uppercase shadow-sm">
+            CONTACT THE PILOT (Direct Email) ↗
+          </a>
+        </div>
+      </aside>
+
+      <!-- RIGHT AREA: Content Tabs (Skills, Social, Bio) -->
+      <main class="md:col-span-8 p-6 md:p-8 overflow-y-auto space-y-10 selection:bg-luxury-goldLight/70 selection:text-luxury-black">
+        
+        <!-- SECTION 1: Personal Background -->
+        <section class="space-y-4">
+          <div class="flex justify-between items-baseline border-b border-luxury-border pb-2">
+            <h2 class="text-xl font-bold text-luxury-black tracking-tight">Biography & Flight Path</h2>
+            <span class="font-mono text-[10px] text-luxury-subtext uppercase tracking-widest">LOG_FILE_002</span>
+          </div>
+          <div class="prose prose-sm text-luxury-subtext max-w-none leading-relaxed">
+            <p>
+              John is a highly disciplined systems architect specializing in high-concurrency environments and distributed systems telemetry. With over 7 years of full-stack experience, he currently serves as Chief Engineer for <strong class="text-luxury-black">Cosmic-Perott Airlines</strong> (Digital Division), overseeing core avionics architecture. Prior to joining Cosmic-Perott, John logged significant flight time as Senior Engineer at <em class="text-luxury-black font-medium">Terraform InfraCorp</em> and <em class="text-luxury-black font-medium">Streamline DataOps</em>. He is passionate about building reliable, maintainable software systems and mentoring junior developers in the art of robust engineering.
+            </p>
+          </div>
+        </section>
+
+        <!-- SECTION 2: Technical Skills (Specs Style) -->
+        <section class="space-y-4">
+          <div class="flex justify-between items-baseline border-b border-luxury-border pb-2">
+            <h2 class="text-xl font-bold text-luxury-black tracking-tight">Technical Feats (Resume pt. 1)</h2>
+            <span class="font-mono text-[10px] text-luxury-subtext uppercase tracking-widest">SYSTEM_READOUT</span>
+          </div>
+          <div class="grid grid-cols-2 lg:grid-cols-3 gap-3 font-mono text-xs">
+            <div class="p-3 bg-luxury-goldLight/20 border border-luxury-border space-y-0.5">
+              <span class="text-luxury-subtext text-[10px]">PENNAPPS XXVI</span>
+              <strong class="text-luxury-black block font-sans">GLOBAL INVITATIONAL FINALIST</strong>
+            </div>
+            <div class="p-3 bg-luxury-goldLight/20 border border-luxury-border space-y-0.5">
+              <span class="text-luxury-subtext text-[10px]">DEVWEEK NYC 2026</span>
+              <strong class="text-luxury-black block font-sans">MAINSTAGE COMPETITOR</strong>
+            </div>
+            <div class="p-3 bg-luxury-goldLight/20 border border-luxury-border space-y-0.5">
+              <span class="text-luxury-subtext text-[10px]">INTERNATIONAL ROBOT YOUTH COMPETITION</span>
+              <strong class="text-luxury-black block font-sans">3 TIME CHAMPION</strong>
+            </div>
+            <div class="p-3 bg-luxury-goldLight/20 border border-luxury-border space-y-0.5">
+              <span class="text-luxury-subtext text-[10px]">YOUTH OLYMPICS HACKATHON 2025</span>
+              <strong class="text-luxury-black block font-sans">MINISTER OF ICT AWARD, SOUTH KOREA</strong>
+            </div>
+            <div class="p-3 bg-luxury-goldLight/20 border border-luxury-border space-y-0.5">
+              <span class="text-luxury-subtext text-[10px]">FOBISIA 2024</span>
+              <strong class="text-luxury-black block font-sans">1ST PLACE</strong>
+            </div>
+            <div class="p-3 bg-luxury-goldLight/20 border border-luxury-border space-y-0.5">
+              <span class="text-luxury-subtext text-[10px]">VEX V5 PUSHBACK NATIONAL TOURNAMENT 25-26</span>
+              <strong class="text-luxury-black block font-sans">#19 OVERALL</strong>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 2: Technical Skills (Specs Style) -->
+        <section class="space-y-4">
+          <div class="flex justify-between items-baseline border-b border-luxury-border pb-2">
+            <h2 class="text-xl font-bold text-luxury-black tracking-tight">Technical Qualifications (Resume pt. 2)</h2>
+            <span class="font-mono text-[10px] text-luxury-subtext uppercase tracking-widest">SYSTEM_READOUT</span>
+          </div>
+          <div class="grid grid-cols-2 lg:grid-cols-3 gap-3 font-mono text-xs">
+            <div class="p-3 bg-luxury-goldLight/20 border border-luxury-border space-y-0.5">
+              <strong class="text-luxury-black block font-sans">STANFORD PRE-COLLEGIATE SUMMER INSTITUTIONS 2025</strong>
+            </div>
+            <div class="p-3 bg-luxury-goldLight/20 border border-luxury-border space-y-0.5">
+              <strong class="text-luxury-black block font-sans">UCIxGATI WINTER RESEARCH PROGRAM 2025-26</strong>
+            </div>
+            <div class="p-3 bg-luxury-goldLight/20 border border-luxury-border space-y-0.5">
+              <strong class="text-luxury-black block font-sans">POLYGENCE RESEARCH PROGRAM 2025</strong>
+            </div>
+            <div class="p-3 bg-luxury-goldLight/20 border border-luxury-border space-y-0.5">
+              <strong class="text-luxury-black block font-sans">COURSERA META AR/VR DEVELOPER CERTIFICATION</strong>
+            </div>
+            <div class="p-3 bg-luxury-goldLight/20 border border-luxury-border space-y-0.5">
+              <strong class="text-luxury-black block font-sans">COURSERA GOOGLE UX DESIGN CERTIFICATION</strong>
+            </div>
+            <div class="p-3 bg-luxury-goldLight/20 border border-luxury-border space-y-0.5">
+              <strong class="text-luxury-black block font-sans">COURSERA UNIVERSITY OF MICHIGAN AR/VR CERTIFICATION WITH HONORS</strong>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 2: Technical Skills (Specs Style) -->
+        <section class="space-y-4">
+          <div class="flex justify-between items-baseline border-b border-luxury-border pb-2">
+            <h2 class="text-xl font-bold text-luxury-black tracking-tight">Past Roles (Resume pt. 3)</h2>
+            <span class="font-mono text-[10px] text-luxury-subtext uppercase tracking-widest">SYSTEM_READOUT</span>
+          </div>
+          <div class="grid grid-cols-2 lg:grid-cols-3 gap-3 font-mono text-xs">
+            <div class="p-3 bg-luxury-goldLight/20 border border-luxury-border space-y-0.5">
+              <span class="text-luxury-subtext text-[10px]">COSMO: RESEARCH AND DEVELOPMENT SOCIETY</span>
+              <strong class="text-luxury-black block font-sans">FOUNDER & CHAIR (2022-2023)</strong>
+            </div>
+            <div class="p-3 bg-luxury-goldLight/20 border border-luxury-border space-y-0.5">
+              <span class="text-luxury-subtext text-[10px]">COSMOS: SOFTWARE ENGINEERING SOCIETY</span>
+              <strong class="text-luxury-black block font-sans">FOUNDER & CHAIR (2023-2026)</strong>
+            </div>
+            <div class="p-3 bg-luxury-goldLight/20 border border-luxury-border space-y-0.5">
+              <span class="text-luxury-subtext text-[10px]">COSMOS ROBOTICS: SCHOOL ROBOTICS SOCIETY</span>
+              <strong class="text-luxury-black block font-sans">FOUNDER & SECRETARY (2026-2027)</strong>
+            </div>
+            <div class="p-3 bg-luxury-goldLight/20 border border-luxury-border space-y-0.5">
+              <span class="text-luxury-subtext text-[10px]">SCHOOL VEX TEAM</span>
+              <strong class="text-luxury-black block font-sans">SOFTWARE DEVELOPER & LEAD DRIVER & REPRESENTATIVE (2025-2027)</strong>
+            </div>
+            <div class="p-3 bg-luxury-goldLight/20 border border-luxury-border space-y-0.5">
+              <span class="text-luxury-subtext text-[10px]">COSMOS: SOFTWARE ENGINEERING SOCIETY</span>
+              <strong class="text-luxury-black block font-sans">PUBLICITY OFFICER (2027)</strong>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Social/Resume (Buttons Style) -->
+        <section class="space-y-4">
+          <div class="flex justify-between items-baseline border-b border-luxury-border pb-2">
+            <h2 class="text-xl font-bold text-luxury-black tracking-tight">Digital Broadcast Channels (Links)</h2>
+            <span class="font-mono text-[10px] text-luxury-subtext uppercase tracking-widest">TRANSCEIVER_ACTIVE</span>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 font-mono text-[11px] tracking-wide">
+            <a href="https://github.com/Cosmic-Perott" target="_blank" class="p-3 border border-luxury-border bg-luxury-card hover:border-luxury-black flex justify-between items-center group transition">
+              <span class="font-semibold text-luxury-black">GitHub Repository</span>
+              <span class="text-luxury-subtext group-hover:text-luxury-black">@cosmic-perott ↗</span>
+            </a>
+            <a href="https://nlcscosmos.com" target="_blank" class="p-3 border border-luxury-border bg-luxury-card hover:border-luxury-black flex justify-between items-center group transition">
+              <span class="font-semibold text-luxury-black">School Software Engineering Club Website</span>
+              <span class="text-luxury-subtext group-hover:text-luxury-black">nlcs/cosmos ↗</span>
+            </a>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- IFE Footer (Screen Controls Simulation) -->
+  <footer class="h-10 mt-4 md:mt-6 flex items-center justify-between px-6 font-mono text-xs text-luxury-subtext/70 uppercase tracking-widest">
+    <span>SYSTEM: CP-IFE v3.1</span>
+    <div class="flex items-center space-x-4">
+      <span>SEAT: 01A</span>
+      <div class="flex items-center space-x-1.5 pl-4 border-l border-luxury-border/50">
+        <button class="w-5 h-5 border border-luxury-border flex items-center justify-center text-[10px]">-</button>
+        <span class="text-[10px]">BRIGHTNESS</span>
+        <button class="w-5 h-5 border border-luxury-border flex items-center justify-center text-[10px]">+</button>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
